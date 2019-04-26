@@ -19,7 +19,7 @@ RUN CGO_ENABLED=0 \
 FROM scratch
 
 COPY --from=cabundle /etc/ssl/certs /etc/ssl/certs
-COPY --from=build    /go/ec2prices  /ec2price
+COPY --from=build    /go/ec2price  /ec2price
 
 EXPOSE 8000
 
